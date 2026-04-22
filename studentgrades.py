@@ -49,6 +49,8 @@ def main():
     for student_id in range(len(results.count())):
         print(f"Student {student_id}: {results.get_by_index(student_id)} points - {results.get_grade(student_id)}")
     print(f"plny poset bodu meli studenti: {results.find(student_id)}")
+    print(f"Serazene vysledky: {}")
+    random_results = StudentGrades(random_numbers())
 
 if __name__ == "__main__":
     main()
