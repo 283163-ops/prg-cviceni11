@@ -33,6 +33,15 @@ class StudentsGrades:
                 positions.append(idx)
             idx += 1
         return positions
+    def get_sorted(self):
+        seznam = self.scores[:]
+        n = len(seznam)
+        for it in range(n - 1, ):  # for cyklus pres iterace
+            for idx in range(n - 1 - it):  # rozmezi n-1 a potom je to mene o jednu iteraci
+                if seznam[idx] > seznam[idx + 1]:
+
+                    seznam[idx], seznam[idx + 1] = seznam[idx + 1], seznam[idx]
+        return seznam
 
 
 if __name__ == "__main__":
