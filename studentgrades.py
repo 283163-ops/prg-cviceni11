@@ -43,11 +43,12 @@ class StudentsGrades:
                     seznam[idx], seznam[idx + 1] = seznam[idx + 1], seznam[idx]
         return seznam
 
+def main():
+    results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
+    print(results.count())
+    for student_id in range(len(results.count())):
+        print(f"Student {student_id}: {results.get_by_index(student_id)} points - {results.get_grade(student_id)}")
+    print(f"plny poset bodu meli studenti: {results.find(student_id)}")
 
 if __name__ == "__main__":
-    results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
-    print(results.count()) # 9 pocet student
-    print(results.get_by_index(2))  #treti student ma 91 bodu
-    print(results.scores)
-    print(results.get_grade(5))# vypsani vsech skor
-    print(results.find(4))
+    main()
