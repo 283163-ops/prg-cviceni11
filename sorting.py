@@ -36,5 +36,5 @@ def main():
 
 
 if __name__ == "__main__":
-    print(random_numbers(10))
+    print(main())
 
